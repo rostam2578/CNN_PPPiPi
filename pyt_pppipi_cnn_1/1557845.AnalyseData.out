@@ -1,0 +1,188 @@
+0: gpu028.ihep.ac.cn
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-f579aadf-ebe3-1fe0-6f4c-21bf68cbdb96)
+Allocate GPU cards : 0
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        450.36.06
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     BB5CB243542347D4EB0C79C
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_MapRegistersEarly:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_EnableBacklightHandler:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_AssignGpus:charp
+
+nvidia-smi:
+Sat Aug 27 20:18:46 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.36.06    Driver Version: 450.36.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   42C    P0    45W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Sun_Mar_21_19:15:46_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.58
+Build cuda_11.3.r11.3/compiler.29745058_0
+
+ torch version: 1.10.2
+
+ cuda version: 11.3
+
+ is cuda available: True
+
+ CUDNN VERSION: 8200
+
+ Number CUDA Devices: 1
+
+ CUDA Device Name: Tesla V100-SXM2-32GB
+
+ CUDA Device Total Memory [GB]: 34.089730048
+
+ Device capability: (7, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2ad4c4ccc8e0> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1
+
+real	0m23.437s
+user	0m2.842s
+sys	0m2.091s
+/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/cupy/_environment.py:438: UserWarning: 
+--------------------------------------------------------------------------------
+
+  CuPy may not function correctly because multiple CuPy packages are installed
+  in your environment:
+
+    cupy, cupy-cuda110
+
+  Follow these steps to resolve this issue:
+
+    1. For all packages listed above, run the following command to remove all
+       existing CuPy installations:
+
+         $ pip uninstall <package_name>
+
+      If you previously installed CuPy via conda, also run the following:
+
+         $ conda uninstall cupy
+
+    2. Install the appropriate CuPy package.
+       Refer to the Installation Guide for detailed instructions.
+
+         https://docs.cupy.dev/en/stable/install.html
+
+--------------------------------------------------------------------------------
+
+  warnings.warn(f'''
+cuda
+digi_pppipi_20000          event  trackId   gid  layer  ...  charge  hitid  angleid     angle
+120          0        9     2      0  ...   814.0   True        2  0.314150
+73           0     1008    18      0  ...   390.0   True       18  2.827350
+0            0     1007    19      0  ...  2276.0   True       19  2.984425
+150          0       10    36      0  ...   955.0   True       36  5.654700
+121          0        9    43      1  ...  1986.0   True        2  0.428386
+...        ...      ...   ...    ...  ...     ...    ...      ...       ...
+5307437  19999        9  6618     42  ...   486.0   True       15  2.399757
+5307436  19999        9  6619     42  ...   437.0   True       15  2.421573
+5307435  19999        9  6620     42  ...   536.0   True       15  2.443389
+5307434  19999        9  6642     42  ...  1200.0   True       18  2.923340
+5307350  19999        7  6761     42  ...   518.0   True        9  5.519441
+
+[5307527 rows x 10 columns] 
+digi_pppipi_20000_nonoise          event  trackId   gid  layer  cell         time  charge     angle
+2777092  11893        7    93      2     9     1.773500   277.0  1.178063
+3673382  15729        7    28      0    28     1.785050   633.0  4.398100
+986342    4230        6   287      5    35     1.820180   356.0  3.054236
+3892959  16687        6    19      0    19     1.845750   567.0  2.984425
+3597168  15398        6   177      3    45     1.847620   546.0  5.048839
+...        ...      ...   ...    ...   ...          ...     ...       ...
+1490666   6380        6  6761     42   253  3215.399902   316.0  5.519441
+3082657  13195       12  3606     30    74  3252.719971   551.0  2.235298
+640735    2735        9  5516     38    96  3275.689941   311.0  2.356125
+846611    3625       12  6776     42   268  3289.489990   467.0  5.846681
+648708    2773       13  6701     42   193  3330.120117   430.0  4.210483
+
+[4659527 rows x 8 columns]
+dfnr after deleting the probable repeated events          event  trackId   gid  layer  ...  charge  hitid  angleid     angle
+120          0        9     2      0  ...   814.0   True        2  0.314150
+73           0     1008    18      0  ...   390.0   True       18  2.827350
+0            0     1007    19      0  ...  2276.0   True       19  2.984425
+150          0       10    36      0  ...   955.0   True       36  5.654700
+121          0        9    43      1  ...  1986.0   True        2  0.428386
+...        ...      ...   ...    ...  ...     ...    ...      ...       ...
+5307437  19999        9  6618     42  ...   486.0   True       15  2.399757
+5307436  19999        9  6619     42  ...   437.0   True       15  2.421573
+5307435  19999        9  6620     42  ...   536.0   True       15  2.443389
+5307434  19999        9  6642     42  ...  1200.0   True       18  2.923340
+5307350  19999        7  6761     42  ...   518.0   True        9  5.519441
+
+[5307527 rows x 10 columns]
+Traceback (most recent call last):
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/pyt_pppipi_cnn_1/./AnalyseData.py", line 90, in <module>
+    dfstrarray = rfn.unstructured_to_structured(dfarray, dty)
+  File "<__array_function__ internals>", line 5, in unstructured_to_structured
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/numpy/lib/recfunctions.py", line 1074, in unstructured_to_structured
+    raise ValueError('The length of the last dimension of arr must '
+ValueError: The length of the last dimension of arr must be equal to the number of fields in dtype
+
+real	0m51.300s
+user	0m18.703s
+sys	0m5.117s

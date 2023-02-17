@@ -1,0 +1,489 @@
+0: gpu020.ihep.ac.cn
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-5e8cba4b-c110-261e-b669-40158a81defb)
+Allocate GPU cards : 0
+
+modinfo:
+filename:       /lib/modules/3.10.0-1127.8.2.el7.x86_64/extra/nvidia.ko.xz
+alias:          char-major-195-*
+version:        450.36.06
+supported:      external
+license:        NVIDIA
+retpoline:      Y
+rhelversion:    7.8
+srcversion:     BB5CB243542347D4EB0C79C
+alias:          pci:v000010DEd*sv*sd*bc03sc02i00*
+alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
+depends:        
+vermagic:       3.10.0-1127.8.2.el7.x86_64 SMP mod_unload modversions 
+parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
+parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
+parm:           NVreg_ResmanDebugLevel:int
+parm:           NVreg_RmLogonRC:int
+parm:           NVreg_ModifyDeviceFiles:int
+parm:           NVreg_DeviceFileUID:int
+parm:           NVreg_DeviceFileGID:int
+parm:           NVreg_DeviceFileMode:int
+parm:           NVreg_InitializeSystemMemoryAllocations:int
+parm:           NVreg_UsePageAttributeTable:int
+parm:           NVreg_MapRegistersEarly:int
+parm:           NVreg_RegisterForACPIEvents:int
+parm:           NVreg_EnablePCIeGen3:int
+parm:           NVreg_EnableMSI:int
+parm:           NVreg_TCEBypassMode:int
+parm:           NVreg_EnableStreamMemOPs:int
+parm:           NVreg_EnableBacklightHandler:int
+parm:           NVreg_RestrictProfilingToAdminUsers:int
+parm:           NVreg_PreserveVideoMemoryAllocations:int
+parm:           NVreg_DynamicPowerManagement:int
+parm:           NVreg_DynamicPowerManagementVideoMemoryThreshold:int
+parm:           NVreg_EnableUserNUMAManagement:int
+parm:           NVreg_MemoryPoolSize:int
+parm:           NVreg_KMallocHeapMaxSize:int
+parm:           NVreg_VMallocHeapMaxSize:int
+parm:           NVreg_IgnoreMMIOCheck:int
+parm:           NVreg_NvLinkDisable:int
+parm:           NVreg_EnablePCIERelaxedOrderingMode:int
+parm:           NVreg_RegisterPCIDriver:int
+parm:           NVreg_RegistryDwords:charp
+parm:           NVreg_RegistryDwordsPerDevice:charp
+parm:           NVreg_RmMsg:charp
+parm:           NVreg_GpuBlacklist:charp
+parm:           NVreg_TemporaryFilePath:charp
+parm:           NVreg_AssignGpus:charp
+
+nvidia-smi:
+Sun Aug 28 14:27:04 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.36.06    Driver Version: 450.36.06    CUDA Version: 11.0     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:B6:00.0 Off |                    0 |
+| N/A   39C    P0    43W / 300W |      0MiB / 32510MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+nvcc --version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Sun_Mar_21_19:15:46_PDT_2021
+Cuda compilation tools, release 11.3, V11.3.58
+Build cuda_11.3.r11.3/compiler.29745058_0
+
+ torch version: 1.10.2
+
+ cuda version: 11.3
+
+ is cuda available: True
+
+ CUDNN VERSION: 8200
+
+ Number CUDA Devices: 1
+
+ CUDA Device Name: Tesla V100-SXM2-32GB
+
+ CUDA Device Total Memory [GB]: 34.089730048
+
+ Device capability: (7, 0) 
+
+ Cuda deviice: <torch.cuda.device object at 0x2b8a59754940> 
+
+ Is cuda initialized: True
+
+ CUDA_HOME: /hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1
+
+real	6m7.830s
+user	0m3.792s
+sys	0m2.708s
+/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/cupy/_environment.py:438: UserWarning: 
+--------------------------------------------------------------------------------
+
+  CuPy may not function correctly because multiple CuPy packages are installed
+  in your environment:
+
+    cupy, cupy-cuda110
+
+  Follow these steps to resolve this issue:
+
+    1. For all packages listed above, run the following command to remove all
+       existing CuPy installations:
+
+         $ pip uninstall <package_name>
+
+      If you previously installed CuPy via conda, also run the following:
+
+         $ conda uninstall cupy
+
+    2. Install the appropriate CuPy package.
+       Refer to the Installation Guide for detailed instructions.
+
+         https://docs.cupy.dev/en/stable/install.html
+
+--------------------------------------------------------------------------------
+
+  warnings.warn(f'''
+/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/pyt_pppipi_cnn_1/./AnalyseData.py:118: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  dfsig['angle'] = (6.283 / wires[dfsig['layer']]) * dfsig['cell']
+/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/pyt_pppipi_cnn_1/./AnalyseData.py:119: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  dfbac['angle'] = (6.283 / wires[dfbac['layer']]) * dfbac['cell']
+/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/pyt_pppipi_cnn_1/./AnalyseData.py:121: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  dfsigalotnoise['angle'] = (6.283 / wires[dfsigalotnoise['layer']]) * dfsigalotnoise['cell']
+/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/pyt_pppipi_cnn_1/./AnalyseData.py:122: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  dfbacalotnoise['angle'] = (6.283 / wires[dfbacalotnoise['layer']]) * dfbacalotnoise['cell']
+/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/pyt_pppipi_cnn_1/./AnalyseData.py:371: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
+  ax = plt.gca(projection='3d')
+cuda
+digi_pppipi_20000          event  trackId   gid  layer  ...  charge  hitid  angleid     angle
+120          0        9     2      0  ...   814.0   True        2  0.314150
+73           0     1008    18      0  ...   390.0   True       18  2.827350
+0            0     1007    19      0  ...  2276.0   True       19  2.984425
+150          0       10    36      0  ...   955.0   True       36  5.654700
+121          0        9    43      1  ...  1986.0   True        2  0.428386
+...        ...      ...   ...    ...  ...     ...    ...      ...       ...
+5307437  19999        9  6618     42  ...   486.0   True       15  2.399757
+5307436  19999        9  6619     42  ...   437.0   True       15  2.421573
+5307435  19999        9  6620     42  ...   536.0   True       15  2.443389
+5307434  19999        9  6642     42  ...  1200.0   True       18  2.923340
+5307350  19999        7  6761     42  ...   518.0   True        9  5.519441
+
+[5307527 rows x 10 columns] 
+digi_pppipi_20000_nonoise          event  trackId   gid  layer  cell         time  charge     angle
+2777092  11893        7    93      2     9     1.773500   277.0  1.178063
+3673382  15729        7    28      0    28     1.785050   633.0  4.398100
+986342    4230        6   287      5    35     1.820180   356.0  3.054236
+3892959  16687        6    19      0    19     1.845750   567.0  2.984425
+3597168  15398        6   177      3    45     1.847620   546.0  5.048839
+...        ...      ...   ...    ...   ...          ...     ...       ...
+1490666   6380        6  6761     42   253  3215.399902   316.0  5.519441
+3082657  13195       12  3606     30    74  3252.719971   551.0  2.235298
+640735    2735        9  5516     38    96  3275.689941   311.0  2.356125
+846611    3625       12  6776     42   268  3289.489990   467.0  5.846681
+648708    2773       13  6701     42   193  3330.120117   430.0  4.210483
+
+[4659527 rows x 8 columns]
+dfnr after deleting the probable repeated events          event  trackId   gid  layer  ...  charge  hitid  angleid     angle
+120          0        9     2      0  ...   814.0   True        2  0.314150
+73           0     1008    18      0  ...   390.0   True       18  2.827350
+0            0     1007    19      0  ...  2276.0   True       19  2.984425
+150          0       10    36      0  ...   955.0   True       36  5.654700
+121          0        9    43      1  ...  1986.0   True        2  0.428386
+...        ...      ...   ...    ...  ...     ...    ...      ...       ...
+5307437  19999        9  6618     42  ...   486.0   True       15  2.399757
+5307436  19999        9  6619     42  ...   437.0   True       15  2.421573
+5307435  19999        9  6620     42  ...   536.0   True       15  2.443389
+5307434  19999        9  6642     42  ...  1200.0   True       18  2.923340
+5307350  19999        7  6761     42  ...   518.0   True        9  5.519441
+
+[5307527 rows x 10 columns]
+
+data frame as an array [[0.0000000e+00 9.0000000e+00 2.0000000e+00 ... 1.0000000e+00
+  2.0000000e+00 3.1415001e-01]
+ [0.0000000e+00 1.0080000e+03 1.8000000e+01 ... 1.0000000e+00
+  1.8000000e+01 2.8273499e+00]
+ [0.0000000e+00 1.0070000e+03 1.9000000e+01 ... 1.0000000e+00
+  1.9000000e+01 2.9844251e+00]
+ ...
+ [1.9999000e+04 9.0000000e+00 6.6200000e+03 ... 1.0000000e+00
+  1.5000000e+01 2.4433889e+00]
+ [1.9999000e+04 9.0000000e+00 6.6420000e+03 ... 1.0000000e+00
+  1.8000000e+01 2.9233403e+00]
+ [1.9999000e+04 7.0000000e+00 6.7610000e+03 ... 1.0000000e+00
+  9.0000000e+00 5.5194411e+00]] 
+structured array [(    0,    9,    2,  0,   2, 105.731,  814.,  True,  2, 0)
+ (    0, 1008,   18,  0,  18, 139.143,  390.,  True, 18, 2)
+ (    0, 1007,   19,  0,  19,  60.752, 2276.,  True, 19, 2) ...
+ (19999,    9, 6620, 42, 112, 268.651,  536.,  True, 15, 2)
+ (19999,    9, 6642, 42, 134,  85.399, 1200.,  True, 18, 2)
+ (19999,    7, 6761, 42, 253, 255.592,  518.,  True,  9, 5)]
+
+
+average values when grouped by trackId                  gid      layer        cell  ...    angleid     angle  frequency
+trackId                                      ...                                
+-1000    1462.797791  13.541496   56.772826  ...  18.107129  3.079914     691597
+-993     1464.727671  14.116164   60.521644  ...  18.911781  3.200221       1825
+-992     1320.316503  12.929874   54.173446  ...  18.758766  3.145767       2139
+-991     1399.936837  13.510834   56.257722  ...  18.472107  3.102447       2169
+-990     1756.675871  16.000995   65.420149  ...  18.249751  3.185631       4020
+-989     1749.223294  16.525964   62.116469  ...  17.884273  3.057124       1348
+-988     1977.838235  17.595588   60.397059  ...  17.477941  2.886403        136
+-987      744.787234   8.691489   42.744681  ...  18.765957  3.067242         94
+-986      313.750000   3.892857   35.035714  ...  21.500000  3.433091         28
+-985       83.200000   1.000000   32.800000  ...  30.200000  4.747156          5
+-984     1901.695652  18.434783   81.695652  ...  22.521739  3.625411         23
+-983     2270.083333  20.083333   77.750000  ...  15.583333  2.538561         12
+ 1       2130.192308  19.384615   60.500000  ...  13.538462  2.374221         26
+ 2       1262.000000  16.000000   26.000000  ...   8.000000  1.276234          1
+ 6       2687.427737  22.439944   82.278657  ...  16.538347  3.102510     577189
+ 7       2678.356111  22.376771   82.820770  ...  16.635727  3.128748     720098
+ 8       2620.491135  21.989380   81.054318  ...  16.583294  3.104385     668010
+ 9       3091.477240  24.888312   90.908894  ...  15.998840  3.144167    1415511
+ 10      3131.227660  25.198929   91.673828  ...  15.881991  3.139673     398011
+ 11      3051.858122  24.853630   89.954881  ...  16.150396  3.116009      60108
+ 12      2427.424265  20.892912   76.887437  ...  16.424557  3.043980      13699
+ 13      2190.756379  19.268869   78.759602  ...  18.757722  3.361829       3723
+ 14      2290.770193  20.098976   69.113766  ...  15.535836  2.831714        879
+ 15      3060.522312  25.127934   88.921037  ...  16.274268  3.108873       6902
+ 16      3076.322062  25.246397  103.919623  ...  16.406596  3.494002       3608
+ 17      3432.435484  27.264516  101.093548  ...  16.970968  3.322123        310
+ 18      4433.304348  32.173913  179.217391  ...  11.565217  4.810984         23
+ 1001    3223.000000  28.000000  107.000000  ...  20.000000  3.232120          1
+ 1006    2174.628208  19.740212   73.501046  ...  17.733803  3.082290     112353
+ 1007    2147.238626  19.559911   72.936740  ...  17.763825  3.083944     140358
+ 1008    2123.928171  19.372066   71.789215  ...  17.595470  3.049391     131869
+ 1009    2462.824917  21.687464   80.435402  ...  17.451852  3.123319     261464
+ 1010    2504.203164  22.022482   80.236205  ...  17.283331  3.085538      72636
+ 1011    2432.785064  21.692861   78.462573  ...  17.651835  3.071421      11529
+ 1012    1962.362178  18.910792   67.141330  ...  17.208821  2.903591       2993
+ 1013    1934.242015  18.122850   86.743243  ...  19.514742  3.744632        814
+ 1014    2169.331492  20.364641   78.790055  ...  19.198895  3.224013        181
+ 1015    2388.160029  21.504425   74.578909  ...  16.955015  2.984580       1356
+ 1016    2478.489950  22.180905   79.153266  ...  16.386935  2.945451        398
+ 1017    3176.532468  26.584416  121.415584  ...  21.363636  3.882167         77
+ 1018     628.333333   7.333333   43.000000  ...  16.666667  2.669482          3
+ 1019    2667.000000  25.000000   79.000000  ...  17.000000  2.820210          1
+
+[42 rows x 9 columns]
+
+
+average values when grouped by trackId for the dataset that has no noise (eventmixer is not used)                 event          gid  ...     angle  frequency
+trackId                             ...                     
+1        11400.185185  2170.666667  ...  2.405995         27
+2         8732.000000  1262.000000  ...  1.276234          1
+6        10005.285658  2585.588754  ...  3.099032     698451
+7         9980.083688  2573.206210  ...  3.121482     871519
+8         9990.960054  2520.132833  ...  3.095354     810527
+9         9923.275508  2976.941011  ...  3.140814    1695293
+10       10035.169810  3017.960066  ...  3.131934     475891
+11        9875.881418  2937.119950  ...  3.105528      72380
+12        9977.962983  2321.508459  ...  3.022163      16965
+13       10860.877471  2125.493591  ...  3.425669       4603
+14        9558.008318  2240.143253  ...  2.921169       1082
+15        9742.936053  2937.708698  ...  3.088288       8335
+16       12026.765536  3007.888834  ...  3.436601       4039
+17       12020.142119  3381.519380  ...  3.433553        387
+18       11728.538462  3994.269231  ...  4.563887         26
+19       11411.000000  2667.000000  ...  2.820210          1
+
+[16 rows x 8 columns]
+
+noise dataframe:          event  trackId   gid  layer  ...  charge  hitid  angleid     angle
+251          0    -1000   589      9  ...     0.0  False       15  2.397461
+149          0     -990  2941     27  ...  2651.0  False        0  0.035699
+252          0    -1000  3060     27  ...     0.0  False       27  4.283864
+253          0    -1000  5553     38  ...     0.0  False       20  3.264215
+450          1    -1000     0      0  ...     0.0  False        0  0.000000
+...        ...      ...   ...    ...  ...     ...    ...      ...       ...
+5307519  19999    -1000  3183     28  ...     0.0  False       12  2.023851
+5307522  19999    -1000  3235     28  ...     0.0  False       22  3.594601
+5307517  19999    -1000  3972     32  ...     0.0  False        4  0.628300
+5307513  19999    -1000  4179     32  ...     0.0  False        8  6.047388
+5307512  19999    -1000  5269     37  ...     0.0  False       16  2.577012
+
+[703396 rows x 10 columns]
+
+signal dataframe:          event  trackId   gid  layer  ...  charge  hitid  angleid     angle
+120          0        9     2      0  ...   814.0   True        2  0.314150
+73           0     1008    18      0  ...   390.0   True       18  2.827350
+0            0     1007    19      0  ...  2276.0   True       19  2.984425
+150          0       10    36      0  ...   955.0   True       36  5.654700
+121          0        9    43      1  ...  1986.0   True        2  0.428386
+...        ...      ...   ...    ...  ...     ...    ...      ...       ...
+5307437  19999        9  6618     42  ...   486.0   True       15  2.399757
+5307436  19999        9  6619     42  ...   437.0   True       15  2.421573
+5307435  19999        9  6620     42  ...   536.0   True       15  2.443389
+5307434  19999        9  6642     42  ...  1200.0   True       18  2.923340
+5307350  19999        7  6761     42  ...   518.0   True        9  5.519441
+
+[4604131 rows x 10 columns]
+
+mc_pppipi_20000         run  event  trackId   pdg  ...          y           z         time  turn
+0     -8093      0        7   211  ...  -0.153795   -0.781903   647.971008     0
+1     -8093      0        8  -211  ...  -0.153795   -0.781903   647.971008     0
+2     -8093      0        9  2212  ...  -0.153795   -0.781903   647.971008     0
+3     -8093      0       10 -2212  ...  -0.153795   -0.781903   647.971008     0
+4     -8093      0       12    14  ... -73.257004  126.240997   725.984009     0
+...     ...    ...      ...   ...  ...        ...         ...          ...   ...
+82498 -8093  19999        7  -211  ...  -0.154576   -0.261208   647.974976     0
+82499 -8093  19999        8  2212  ...  -0.154576   -0.261208   647.974976     0
+82500 -8093  19999        9 -2212  ...  -0.154576   -0.261208   647.974976     0
+82501 -8093  19999       11    14  ...  -2.995300  -81.362396   677.229980     0
+82502 -8093  19999       12   -11  ...  -3.057720  -81.383202  1288.829956     0
+
+[82503 rows x 12 columns]
+
+mc_pppipi_20000_nonoise         run  event  trackId   pdg  ...          y           z         time  turn
+0     -8093      0        7   211  ...  -0.153795   -0.781903   647.971008     0
+1     -8093      0        8  -211  ...  -0.153795   -0.781903   647.971008     0
+2     -8093      0        9  2212  ...  -0.153795   -0.781903   647.971008     0
+3     -8093      0       10 -2212  ...  -0.153795   -0.781903   647.971008     0
+4     -8093      0       12    14  ... -73.257004  126.240997   725.984009     0
+...     ...    ...      ...   ...  ...        ...         ...          ...   ...
+83176 -8093  19999        7  -211  ...  -0.154576   -0.261208   647.974976     0
+83177 -8093  19999        8  2212  ...  -0.154576   -0.261208   647.974976     0
+83178 -8093  19999        9 -2212  ...  -0.154576   -0.261208   647.974976     0
+83179 -8093  19999       11    14  ...  -2.995300  -81.362396   677.229980     0
+83180 -8093  19999       12   -11  ...  -3.057720  -81.383202  1288.829956     0
+
+[83181 rows x 12 columns]
+
+ 2nd event in mc_pppipi_20000      run  event  trackId   pdg  ...         y         z        time  turn
+9  -8093      2        6   211  ... -0.154965 -0.130122  664.072998     0
+10 -8093      2        7  -211  ... -0.154965 -0.130122  664.072998     0
+11 -8093      2        8  2212  ... -0.154965 -0.130122  664.072998     0
+12 -8093      2        9 -2212  ... -0.154965 -0.130122  664.072998     0
+
+[4 rows x 12 columns]
+
+ 2nd event in mc_pppipi_20000_nonoise      run  event  trackId   pdg  ...         y         z        time  turn
+9  -8093      2        6   211  ... -0.154965 -0.130122  664.072998     0
+10 -8093      2        7  -211  ... -0.154965 -0.130122  664.072998     0
+11 -8093      2        8  2212  ... -0.154965 -0.130122  664.072998     0
+12 -8093      2        9 -2212  ... -0.154965 -0.130122  664.072998     0
+
+[4 rows x 12 columns]
+
+event 1260 as another example        run  event  trackId   pdg  ...          y           z        time  turn
+5206 -8093   1260        6   211  ...  -0.154700   -0.822821  663.971985     0
+5207 -8093   1260        7  -211  ...  -0.154700   -0.822821  663.971985     0
+5208 -8093   1260        8  2212  ...  -0.154700   -0.822821  663.971985     0
+5209 -8093   1260        9 -2212  ...  -0.154700   -0.822821  663.971985     0
+5210 -8093   1260       11    14  ...  79.366798 -110.444000  669.822998     0
+
+[5 rows x 12 columns]
+
+average values when grouped by pgd          trackId        px        py  ...         time  turn  frequency
+pdg                                   ...                              
+-2212   9.254706  0.013462 -0.004832  ...   655.908691   0.0      19497
+-211    7.254569  0.006574  0.000708  ...   655.907349   0.0      18934
+-22    10.428571  0.028214  0.011426  ...   658.269592   0.0          7
+-14    13.363252 -0.001322  0.002282  ...  1654.815186   0.0        947
+-13    10.301056 -0.001256  0.001871  ...   659.341553   0.0       1136
+-11    12.328652  0.000047 -0.000152  ...  1315.850342   0.0        356
+ 11    17.000000  0.007072 -0.000787  ...   654.383972   0.0          1
+ 13    11.715254 -0.000008 -0.004404  ...   658.740906   0.0       1180
+ 14    11.260670  0.000606  0.000364  ...   684.203430   0.0       3046
+ 22     1.047619 -0.000005  0.000057  ...   655.233337   0.0         21
+ 211    6.254656  0.004275  0.002220  ...   655.933899   0.0      18955
+ 2212   8.253705  0.010898  0.002292  ...   655.900818   0.0      18423
+
+[12 rows x 10 columns]
+
+there is no signal hit in event number 12278
+
+there is no signal hit in event number 15965
+
+total number of hits of each event [[254]
+ [288]
+ [291]
+ ...
+ [403]
+ [448]
+ [319]] 
+shape (19998, 1) 
+average 265.37743774377435 
+sum 5307018
+
+array of the number of signal hits of each event [250 196 213 ... 397 276 302] 
+shape (19998,) 
+average 230.22957295729572
+
+sum up to any event [    254     542     833 ... 5306251 5306699 5307018]
+gid        1464.380348
+layer        13.560742
+cell         56.831684
+time        538.545410
+charge       32.532444
+hitid         0.000000
+angleid      18.113000
+angle         3.081052
+dtype: float64 gid        2781.182563
+layer        23.090300
+cell         84.801678
+time        192.673584
+charge     1812.923950
+hitid         1.000000
+angleid      16.497662
+angle         3.121610
+dtype: float64
+
+ hits wich have more noise that signal hits: 198        signum  bacnum  highnoise
+event                           
+0         250       4      False
+1         196      92      False
+2         213      21      False
+3         266      25      False
+4         185      13      False
+...       ...     ...        ...
+19995     144      38      False
+19996     368      32      False
+19997     397       6      False
+19998     276     172      False
+19999     302      17      False
+
+[19998 rows x 3 columns]
+Traceback (most recent call last):
+  File "/hpcfs/bes/mlgpu/hoseinkk/MLTracking/otherparticles/pppipi/pyt_pppipi_cnn_1/./AnalyseData.py", line 392, in <module>
+    anim = animation.FuncAnimation(fig, animate, init_func=init, frames=360, interval=15, blit=True)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/animation.py", line 1705, in __init__
+    super().__init__(fig, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/animation.py", line 1467, in __init__
+    super().__init__(fig, event_source=event_source, *args, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/animation.py", line 969, in __init__
+    self._setup_blit()
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/animation.py", line 1281, in _setup_blit
+    self._post_draw(None, self._blit)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/animation.py", line 1234, in _post_draw
+    self._fig.canvas.draw_idle()
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2055, in draw_idle
+    self.draw(*args, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 406, in draw
+    self.figure.draw(self.renderer)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/artist.py", line 74, in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/artist.py", line 51, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/figure.py", line 2800, in draw
+    self.canvas.draw_event(renderer)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 1792, in draw_event
+    self.callbacks.process(s, event)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/cbook/__init__.py", line 275, in process
+    self.exception_handler(exc)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/cbook/__init__.py", line 89, in _exception_printer
+    raise exc
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/cbook/__init__.py", line 270, in process
+    func(*args, **kwargs)
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/animation.py", line 991, in _start
+    self._init_draw()
+  File "/hpcfs/bes/mlgpu/hoseinkk/Miniconda3/envs/dgl1/lib/python3.9/site-packages/matplotlib/animation.py", line 1761, in _init_draw
+    for a in self._drawn_artists:
+TypeError: 'Figure' object is not iterable
+
+real	3m48.930s
+user	1m47.190s
+sys	0m8.416s
